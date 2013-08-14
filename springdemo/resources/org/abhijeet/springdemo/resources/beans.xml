@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="propInjectedSequenceGenerator" class="org.abhijeet.springdemo.beans.SequenceGenerator">
+		<property name="prefix" value="A"/>
+		<property name="initial" value="100"/>
+		<property name="suffix" value="P"/>
+	</bean>
+</beans>
