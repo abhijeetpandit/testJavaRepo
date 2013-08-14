@@ -1,5 +1,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
@@ -15,4 +16,7 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		<constructor-arg value="100"/>
 		<constructor-arg value="P"/>
 	</bean>
+	
+	<bean name="pshortcutInjectedSequenceGenerator" class="org.abhijeet.springdemo.beans.SequenceGenerator"
+	p:prefix="A" p:initial="100" p:suffix="P"/>
 </beans>
