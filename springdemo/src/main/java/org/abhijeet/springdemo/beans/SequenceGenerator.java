@@ -10,12 +10,10 @@ public class SequenceGenerator {
 		
 	}
 	
-	public SequenceGenerator(String prefix, String suffix, int initial,
-			int counter) {
+	public SequenceGenerator(String prefix, int initial, String suffix) {
 		this.prefix = prefix;
-		this.suffix = suffix;
 		this.initial = initial;
-		this.counter = counter;
+		this.suffix = suffix;
 	}
 
 	public void setPrefix(String prefix) {

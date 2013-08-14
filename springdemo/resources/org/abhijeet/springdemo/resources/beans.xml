@@ -4,9 +4,15 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-	<bean id="propInjectedSequenceGenerator" class="org.abhijeet.springdemo.beans.SequenceGenerator">
+	<bean name="propInjectedSequenceGenerator" class="org.abhijeet.springdemo.beans.SequenceGenerator">
 		<property name="prefix" value="A"/>
 		<property name="initial" value="100"/>
 		<property name="suffix" value="P"/>
+	</bean>
+	
+	<bean name="constructorInjectedSequenceGenerator" class="org.abhijeet.springdemo.beans.SequenceGenerator">
+		<constructor-arg value="A"/>
+		<constructor-arg value="100"/>
+		<constructor-arg value="P"/>
 	</bean>
 </beans>
