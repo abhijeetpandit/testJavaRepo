@@ -19,4 +19,22 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
 	<bean name="pshortcutInjectedSequenceGenerator" class="org.abhijeet.springdemo.beans.SequenceGenerator"
 	p:prefix="A" p:initial="100" p:suffix="P"/>
+	
+	<bean name="defaultDatePrefixCustomSequenceGenerator" class="org.abhijeet.springdemo.beans.CustomSequenceGenerator">
+		<property name="prefixGenerator">
+			<bean class="org.abhijeet.springdemo.beans.DatePrefixGenerator"/>			
+		</property>
+		<property name="initial" value="1000"/>
+		<property name="suffix" value="val"/>
+	</bean>
+	
+	<bean name="customDatePrefixCustomSequenceGenerator" class="org.abhijeet.springdemo.beans.CustomSequenceGenerator">
+		<property name="prefixGenerator">
+			<bean class="org.abhijeet.springdemo.beans.DatePrefixGenerator">
+				<constructor-arg name="pattern" value="ddMMMyyyy"/>
+			</bean>			
+		</property>
+		<property name="initial" value="1000"/>
+		<property name="suffix" value="val"/>
+	</bean>
 </beans>
